@@ -1,0 +1,246 @@
+/*VARIABLES*/
+
+$azul-claro: #3853A2;
+$azul-oscuro: #1F2F3E;
+$blanco: #fff;
+
+/*General*/
+
+body {
+    background: linear-gradient(90deg, hsla(225, 49%, 43%, 0.384) 0%, hsla(225, 49%, 43%, 0.616) 80%), url(../gal/gal4.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* hover del menu */
+.menu__enlace {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.menu__enlace:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $azul-claro;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.menu__enlace:hover:before,
+.menu__enlace:focus:before,
+.menu__enlace:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+/* INICIO */
+.portada {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imgPortada {
+    width: 30%;
+}
+
+/* GALERIA */
+.galeria {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeria__img {
+    width: 24%;
+    height: 200px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 #000000;
+}
+
+@media (max-width:960px) {
+    .galeria__img {
+        width: 48%;
+    }
+}
+
+@media (max-width:768px) {
+    .galeria__img {
+        width: 96%;
+    }
+}
+
+
+.galeria__img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.galeria__img:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+/*SERVICIOS*/
+.contenedorServicios {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+/*NOSOTROS*/
+.carousel {
+    padding-top: 50px;
+}
+
+.carousel-item {
+    padding-bottom: 150px;
+}
+
+@media (max-width:990px) {
+    .carousel-item {
+        padding-bottom: 180px;
+    }
+}
+
+@media (max-width:768px) {
+    .carousel-item {
+        padding-bottom: 210px;
+    }
+}
+
+@media (max-width:430px) {
+    .carousel-item {
+        padding-bottom: 240px;
+    }
+}
+
+@media (max-width:300px) {
+    .carousel-item {
+        padding-bottom: 270px;
+    }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(1);
+}
+
+.carousel-item__imgtest {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*CONTACTO*/
+.formulario {
+    width: 50%;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+}
+
+/*Estructura BEM*/
+.card-body__titulo1 {
+    font-family: 'Days One', sans-serif;
+}
+
+.card-body__titulo2,
+.card-body__parrafo,
+.menu__enlace,
+.servicios__parrafo,
+.servicios__numero,
+.lista__item,
+.carousel-item__titulo,
+.carousel-item__parrafo,
+.formulario__etiqueta {
+    font-family: 'Arimo', sans-serif;
+}
+
+.card-body__parrafo {
+    text-align: justify;
+}
+
+.card-body__titulo1,
+.card-body__titulo2 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.card-body__titulo1 {
+    color: $azul-claro;
+}
+
+.card-body__titulo2 {
+    color:$azul-oscuro;
+}
+
+.servicios {
+    width: 25%;
+    margin: 20px;
+    text-align: center;
+    object-fit: cover;
+    display: block;
+}
+
+.servicios__numero {
+    background: linear-gradient(90deg, $azul-oscuro 35%, $azul-claro 100%);
+    color: $blanco;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+}
+
+.lista {
+    padding: 20px;
+    background: $azul-oscuro;
+    background: linear-gradient(90deg, $azul-oscuro 35%, $azul-claro 100%);
+}
+
+.lista__item {
+    color:$blanco;
+}
