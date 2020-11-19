@@ -143,6 +143,14 @@ textarea {
   width: 50%;
   height: 100px; }
 
+@media (max-width: 1000px) {
+  .formulario, textarea {
+    width: 80%; } }
+
+@media (max-width: 768px) {
+  .formulario, textarea {
+    width: 99%; } }
+
 /*Estructura BEM*/
 .card-body__titulo1 {
   font-family: 'Days One', sans-serif; }
@@ -173,11 +181,23 @@ textarea {
   color: #1F2F3E; }
 
 .servicios {
-  width: 25%;
-  margin: 20px;
+  width: 18%;
+  padding-left: 5px;
   text-align: center;
   object-fit: cover;
   display: block; }
+
+@media (max-width: 1000px) {
+  .servicios {
+    width: 30%; } }
+
+@media (max-width: 750px) {
+  .servicios {
+    width: 49%; } }
+
+@media (max-width: 500px) {
+  .servicios {
+    width: 75%; } }
 
 .servicios__numero {
   background: linear-gradient(90deg, #1F2F3E 35%, #3853A2 100%);
