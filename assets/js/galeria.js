@@ -6,7 +6,7 @@ for (imagen of imagenes) {
     galeria.innerHTML += `
     <div class="card">
 <a href="#" data-toggle="modal" data-target="#id${imagen}">
-    <img id="imgGal" class="card-img-top" src="../gal/${imagen}.jpg" alt="">
+    <img id="imgGal" class="card-img-top" src="../assets/gal/${imagen}.jpg" alt="">
 </a>
 </div>
 
@@ -19,7 +19,7 @@ aria-hidden="true">
 </button>
 
 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <img src="../gal/${imagen}.jpg" alt="" class="img-fluid rounded">
+    <img src="../assets/gal/${imagen}.jpg" alt="" class="img-fluid rounded">
 </div>
 </div>`
 }
